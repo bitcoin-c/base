@@ -132,9 +132,9 @@ size_t Hex2Bin(const char *begin, size_t size, unsigned char *to)
     while(begin < end)
     {
         c1=ch_util_hexdigit[(int)(*begin++)];
-		c2=ch_util_hexdigit[(int)(*begin++)];
-		if(c1==-1 || c2==-1) return 0; // not a hex string
-		*p++ =(c1 << 4)|c2;
+	c2=ch_util_hexdigit[(int)(*begin++)];
+	if(c1==-1 || c2==-1) return 0; // not a hex string
+	*p++ =(c1 << 4)|c2;
     }
     return cb;
 }
@@ -231,7 +231,6 @@ size_t HexDump(const unsigned char *data, size_t size, int fh, uint32_t nDisplay
 			*p++=' ';
 			*p++=' ';
 
-		//	szText[i]=' ';
 		}
 
 
